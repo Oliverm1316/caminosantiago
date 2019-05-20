@@ -1,0 +1,301 @@
+---
+title: <br><br><center>CAMINO DE SANTIAGO<center>
+author: "CUTTING EDGE EVENTS"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" vspace="50" align="right"></A>') 
+    }); 
+</script> 
+
+```{r knitr_init, echo=FALSE, cache=FALSE, message= FALSE,warning=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=750)
+```
+
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(readxl)
+library(shiny)
+library(dplyr)
+library(knitr)
+```
+
+## HISTORY 
+**The pilgrimage to Santiago** is the most outstanding and most profoundly experienced religious phenomenon of the Middle Ages, a fact that was recently recognised by the European Parliament, which designated the Way the First **European Cultural Itinerary**, and **by UNESCO, which declared it a World Heritage route**. 
+
+The discovery of the tomb of the **Apostle James**, the son of Zebedee and brother of John the Evangelist, changed the appearance of a small Roman settlement in the northwest Iberian Peninsula that, with the passing of the centuries, had become a necropolis; it was also a turning point in the spiritual history of a continent that soon set about building a road in order to reach the precious relic.
+
+* **THE FRENCH WAY** 
+The pilgrim route par excellence has **two branches**, depending on the piligrims’ point of entry from France.
+
+The main French Way: Having reached Saint Jean Pied de Port (France), the pilgrims travel 774 kilometres in Spain, passing through the provinces of Navarre, La Rioja, Burgos, Palencia, Leon, Lugo and A Coruña. **At an average of 20-25 kilometres daily, it usually takes about 30 days to reach Santiago**.
+
+The route began to be signposted with yellow arrows in the eighties, thanks to the parish priest of O Cebreiro, Elías Valiña, and the Association of the Friends of the Navarre Way. This first **symbol** is now accompanied by milestones and each region’s institutional signs.
+
+Roncesvalles – Pamplona – Puente La Reina – Estella – Logroño – Nájera – Santo Domingo de la Calzada – Burgos – Castrojeriz - Carrión de los Condes – Frómista – Sahagún – León – Astorga – Ponferrada and then they enter Galicia via O Cebreiro – Samos – **Sarria – Portomarín – Palas de Reis – Melide – Arzúa – Santiago de Compostela**. We will do the last 100km from this route 
+
+<iframe src="https://www.google.com/maps/d/embed?mid=1wZ-Zm9XwaheD8bvBi42vYbwLmTU" width="640" height="480"></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7wvZ1WHnX3Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Programme
+
+### **Programme Overview and timeline**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(timevis)
+library(dplyr)
+library(readxl)
+
+timeline <- read_excel("timeline.xlsx", sheet = "Sheet1", 
+    col_types = c("date", 
+        "text", "text", "numeric", "text", 
+        "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+
+### **DAY ONE: OCTOBER 5TH 2019**
+
+The group will land in **Madrid airport** and it will be received by a hostess to guide the group until the bus for transfer from Madrid until **Sarria** in Lugo - Transfer time: around 6 hours - 522 km 
+
+<img src = "https://static.wixstatic.com/media/0b582b_cd2ea93a7aca407c9c2da0af41bfa640~mv2_d_1928_1285_s_2.jpg">
+
+Upon arrival at this beautiful villa, the group will be able to sit on one of the terraces and have a cool drink with beautiful vies of the **Sarria River** . Depending on the arrival time, the group will walk along the river until the **O Chanto** area and have a swim in its pools. We also recommend to visit the **Convent of the Magdalena Monastery** All these recommendations are at leisure, as it will depend on the clients and how tired they will be. The dinner will be at the hotel. 
+
+<img src = "https://ucmedia.er2.co/es/des/9/6/1600/o_1bov0pjr2k08bo0f3o1hdp16fva.jpg">
+
+**The recommended hotel in Sarria will be ALFONSO IX - 4* ** 
+The Hotel was refurbished in 2003 and there are 60 rooms, three of which are elegant suites, divide don to 4 floors. There is a warm welcome waiting in the air conditioned hall, there is a 24 hour reception service and  there is also a charming cafeteria. The Hotel is perfect for business trips as there is a conference room with internet connection. Laundry, room service and car park are available. In the outside area there are two swimming pools, one for children with sun beds and shades. There is also a gymnasium, sauna ping pong and mini golf available to clients. 500mts away there is a ski station and 2 kms away a golf course.
+
+<img src = "https://s-ec.bstatic.com/images/hotel/max1280x900/393/3936766.jpg" width="360"> <img src = "http://www.alfonsoix.com/images/rooms/salones-01.jpg" width="370" align="right">
+
+
+### **DAY TWO: OCTOBER 6TH 2019**
+* **Stage Sarria - Portomarín**
+* **Distance** 22 km 
+* **Walking time** 4-5 hours 
+
+The group will walk through rural paths under oak groves and small villages such as **Lavandeira** or **Ferreiros**. At the gates of **Portomarín**, you will cross the **river Miño**, under whose waters the old Portomarín rests. It could be possible to visit the **Church of San Nicolás de Portomarín**, rebuilt stone by stone. Dinner at the hotel
+
+<img src = "https://www.jacobeo.net/documentos/fotos_localidades/20170620104742485.jpg" width="330"> <img src = "http://www.alberguescaminosantiago.com/wp-content/uploads/2018/03/Mojon_100_km_para_Santiago.jpg" width="380" align="right">
+
+**The recommended hotel in Portomarín will be the HOTEL FERRAMENTEIRO-2* **
+Featuring free WiFi and buffet breakfast, **Hotel Ferramenteiro** de Portomarin offers accommodation in **Portomarin**, in the Saint James' Way Pilgrimage Route, 23 km from Lugo. The hotel has a bar and a terrace, and views of the river. Rooms include a flat-screen TV, air conditioning, heating, and safe. The bathroom comes with bath or shower and hairdryer.
+
+<img src = "https://s-ec.bstatic.com/images/hotel/max1280x900/518/51805151.jpg" width="300"> <img src = "https://media-cdn.tripadvisor.com/media/photo-s/09/54/b9/5a/hotel-ferramenteiro.jpg" width="390" align="right">
+
+
+### **DAY THREE: OCTOBER 7TH 2019**
+
+* **Stage Portomarín - Palas de Rei**
+* **Distance** 25 km 
+* **Walking time** 5-6 hours 
+
+The group will ascend first to **Castromaior** and then to the **Sierra de Ligonde** to descend gradually through the villages of **Eirexe** and **Ligonde** to the village of **Palas de Rei**. In Palas the group will have the opportunity to visit the **Castle of Pambre**.
+
+<img src = "https://hostelocastelo.com/wp-content/uploads/2016/06/albergue-peregrinos-palas-rey-1024x553.jpg" width="430"> <img src = "https://caminosantiagoreservas.files.wordpress.com/2017/03/camino02.jpg" width="360" align="right">
+
+**The recommended hotel in Palas del Rei will be the COMPLEJO LA CABAÑA -3* **
+The **La Cabaña complex** is surrounded by pine and chestnut trees. It is located close to the end of the French route of the Camino de Santiago Pilgrimage Route, and has free Wi-Fi.
+The accommodation in **Complejo La Cabaña** can be found spread across 3 attractive wooden cabins. All rooms have private bathrooms, as well as TV and telephone.
+La Cabaña has a lounge and games room, as well as a children’s playground. The property also offers secure bicycle storage.
+The **à la carte restaurant** offers traditional Galician cuisine, while the café offers buffet meals. Guests can also enjoy a drink on the terrace.
+The property offers **specific services and facilities for pilgrims**. These services include backpacks transfer, lockers, bike rental and bike storage and massage and laundry services.
+
+<img src = "https://s-ec.bstatic.com/images/hotel/max1280x900/642/64264566.jpg" width="360"> <img src = "https://t-ec.bstatic.com/images/hotel/max1024x768/642/64261478.jpg" width="360" align="right">
+
+### **DAY FOUR: OCTOBER 8TH 2019**
+
+* **Stage Palas de Rei - Melide**
+* **Distance** 15 km 
+* **Walking time** 4-5 hours 
+
+The group will make your way through beautiful rural roads and medieval bridges to **Melide**, where you can stop and grab a portion of their famous **Pulpo á feira** (octopus).
+
+<img src = "https://vivecamino.com/img/gal/melide-panoramio-enrique-vazquez_1966_p.jpg" width="360"> <img src = "http://www.alberguescaminosantiago.com/wp-content/uploads/2019/02/Melide_La_Coruna_Camino_Frances_puente.jpg" width="400" align="right">
+
+**The recommended accommodation in Melide will be the HOTEL CARLOS 96 - 1* **
+Boasting a garden and bar, as well as a restaurant, **Hotel Carlos 96** is set in Melide. The tour desk can help arrange some activities and free WiFi is at guests' disposal.
+At the hotel the rooms are equipped with a desk, a TV and a private bathroom.
+Guests at **Hotel Carlos 96** can enjoy a continental breakfast.
+The accommodation offers a terrace.
+
+<img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/512/51262936.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/517/51764412.jpg" width="360" align="right">
+
+
+### **DAY FIVE: OCTOBER 9TH 2019**
+
+* **Stage  Melide - Arzúa**
+* **Distance** 15 km 
+* **Walking time** 4-5 hours 
+
+Today the group will continue through an agricultural landscape that will take you to **Arzúa** after crossing the beautiful Iso river.
+
+ <img src = "https://media2.clubrural.com/img990x400/pueblos/a-coruna/arzua/20150929135908-a-coruna-arzua.jpg">
+
+**The recommended accommodation in Arzua will be the HOTEL A CURUXA - 1* **
+**Hotel A Curuxa** is located in Arzúa and features a seasonal outdoor swimming pool and a garden. Among the various facilities are a terrace and a bar. Both private parking and free WiFi are accessible at the hotel.
+
+All rooms in **Hotel A Curuxa** are equipped with a flat-screen TV. Each room comes with a private bathroom. All units at the accommodation include air conditioning and a wardrobe.
+
+<img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/162/162878651.jpg" width="360"> <img src = "https://q-fa.bstatic.com/images/hotel/max1024x768/162/162879639.jpg" width="360" align="right">
+
+
+### **DAY SIX: OCTOBER 10TH 2019**
+
+* **Stage Arzúa - Rua**
+* **Distance** 19 km 
+* **Walking time** 4-5 hours 
+
+The group cannot leave **Arzúa** without tasting their delicious cheese (Arzúa-Ulloa) and without stamping your **Pilgrim Credential** in the **Church of Santiago de Arzúa**. Green hills will be your traveling companions to the town of Rúa
+
+<img src = "https://www.desnivel.com/images/2011/04/camino-de-santiago.-entre-sobrado-dos-monxes-y-arzua-camino-del-norte.jpg" width="360"> <img src = "https://www.eldiario.es/canariasahora/viajarahora/Peregrinos-Camino-Santiago-VIAJAR-AHORA_EDIIMA20150202_0675_13.jpg" width="360" align="right">
+
+
+**The recommended accommodation in Rua will be the HOTEL LA CALZADA - 2* **
+Boasting a terrace, **Hotel Calzada** is set in Arcos. Featuring a restaurant, the property also features a shared lounge and a bar. The accommodation features a 24-hour front desk as well as free WiFi throughout the property.
+
+At the hotel, rooms are equipped with a wardrobe. With a private bathroom, rooms at Hotel Calzada also boast a mountain view. At the accommodation, the rooms are fitted with air conditioning and a flat-screen TV.
+
+A continental breakfast is available every morning at **Hotel Calzada**.
+
+<img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/759/75967834.jpg"> 
+
+### **DAY SEVEN: OCTOBER 11TH 2019**
+
+* **Stage Rua - Santiago de Compostela**
+* **Distance** 20 km 
+* **Walking time** 4-5 hours 
+
+After passing behind **Pedrouzo** the group will go up through Amenal and descend to Lavacolla. You will ascend again until you reach Monte do Gozo. From here you will see the **Cathedral Towers** for the first time. Only 4 km separate you from the city. You will cross the Barrio de San Lázaro, cross the **Porta do Camiño**, you will leave behind the Plaza Cervantes and through the beautiful streets of the old town of Compostela you will reach the **Cathedral of Santiago**.
+
+<img src = "https://www.eldiario.es/canariasahora/viajarahora/Senal-Camino-Santiago-municipio-compostelano-frances-galicia-peregrino-senal-mojon-Lavacolla_EDIIMA20170510_0873_19.jpg" width="360"> <img src = "http://carismaviajes.com/wp-content/uploads/2016/11/5bab6_camino-santiago-burgos.jpg" width="360" align="right">
+
+
+**The recommended accommodation in Santiago will be the SAN FRANCISCO HOTEL MONUMENTO - 4* **
+**San Francisco Monumento** is a historic monastery with an indoor pool and hot tub. This charming hotel is located in the centre of Santiago de Compostela, 150 m from the famous Cathedral.
+
+Rooms at the hotel are spacious and elegant. They all have a minibar and a flat-screen TV. Free internet access is also available. Rooms also have air conditioning and heating.
+
+**The San Francisco** has a gourmet restaurant, serving creative regional dishes. The restaurant uses fresh produce from the hotel gardens.
+
+<img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/124/12411300.jpg" width="360"> <img src = "https://r-fa.bstatic.com/images/hotel/max1024x768/782/78272111.jpg" width="360" align="right">
+
+
+### **DAY EIGHT: OCTOBER 12TH 2019**
+
+After the breakfast, the group will be transferred to Santiago de Compostela airport for departures. 
+
+<img src = "http://img2.rtve.es/i/?w=1600&i=1344607107711.jpg">
+
+
+END OF THE PROGRAMME
+
+*****
+
+## Budget
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+library(readxl)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+budget <- read_excel("timeline.xlsx", sheet = "Sheet2", 
+    col_types = c("date", "text", "text", 
+        "numeric", "text", "numeric", "numeric"))
+budget$DATE <- as.Date(budget$DATE) %>% format("%b/%d")
+
+
+table <- budget[,c(1,3:7)] 
+table$Total <- paste('€',formatC(table$Total, big.mark=',', format = NULL ))
+table$withVAT <- paste('€',formatC(table$withVAT, big.mark=',', format = NULL ))
+table <- sapply(table,as.character)
+table[is.na(table)] <- " "
+
+
+table %>%  
+  kable() %>% kable_styling(bootstrap_options = c("striped","condensed","responsive"),font_size = 10, fixed_thead = list(enabled=T, background="#EF8319")) %>% column_spec(6, 
+bold = T, width = "2cm") %>% 
+  row_spec(nrow(table), bold = T, color = "black", background ="#EF8319")
+
+
+```
+
+## Terms & Conditions
+
+  * Rates valid for 2019.
+  * Net rates for Better Travel 
+  * Trip valid for a minimum of 15 participants
+  * Included services: 
+       * Luggage transport during the stages (maximum 1 piece of 20kg per person)
+       * Travel documents & Pilgrim passport 
+       * 6 Picnics 
+       * 7 dinners
+       * English speaking escort guide from October 6th to 11th, 2019 
+       * VAT 
+       * Cutting Edge Events Management fee 
+   
+  * No reservation has been done. Availability upon request.
+  * Accommodations will be in hotel, guests houses and rural houses - upong confirmation. 
+  
+  
+### Cancellations and payment Terms 
+
+**WHOLE GROUP** Cancelations & Handling fees 
+
+* From confirmation to 45 days prior the trip: 10% of the total invoice 
+* From 44 days to 30 days before the tour: 30% of total invoice
+* From 29 days to 20 days before the tour: 60% of total invoice 
+* From 19 days until the day of the tour and no shows: 100% cancellation will be applied. 
+
+**INDIVIDUAL CANCELLATIONS INSIDE THE GROUP** Cancelations & Handling fees 
+
+* From confirmation to 30 days before the tour: 20% of total invoice
+* From 29 days to 20 days before the tour: 40% of total invoice 
+* From 19 days to 10 days prior the tour: 70% of total invoice 
+* From 9 days until the day of the tour and no shows: 100% cancellation will be applied. 
+
+**PAYMENT**
+
+* 600€ deposit (non reundable) to confirm the booking 
+* 40% of the total amount 50 days prior arrival 
+* 60% of total amount 30 days prior arrival 
+  
+*****
+
+
+
